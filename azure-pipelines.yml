@@ -29,6 +29,8 @@ stages:
     jobs:
       - deployment: Deploy
         environment: agent-1
+        pool:
+          vmImage: 'ubuntu-latest'
         strategy:
           runOnce:
             deploy:
